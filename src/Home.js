@@ -1,4 +1,5 @@
 import * as React from 'react';
+import StakeList from "./StakeList";
 
 const Home = () => {
 
@@ -13,24 +14,25 @@ const Home = () => {
   return (
     <div class="text-center">
       <br></br>
+        <br></br>
       <font size="7">Stake Index</font>
       <br></br>
       <br></br>
-      <Button class="bt1" onClick={OpenJoinPage}>Join The List</Button>
+        <br></br>
+        <h4>Stake Index is a directory that helps validators and
+            delegators find reliable re-staking services.
+        </h4>
+        <br></br>
+        <h4>It also provides re-staking businesses with an option to
+            apply to join the existing list, allowing for businesses to have an
+            easier way of announcing their own pools to the world!
+        </h4>
+        <br></br>
+        <br></br>
+        <Button class="bt2" onClick={OpenStakeListPage}>View Stake List</Button>
       &nbsp;&nbsp;
-      <Button class="bt2" onClick={OpenStakeListPage}>View Stake List</Button>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <h4>The Stake Index is a simple list that allows validators and
-        delegators to find reliable re-staking servises that they 
-        require.
-      </h4>
-      <h4>It also supplies re-staking businesses with the ability to
-        apply to join the list, allowing for busnisses to have an 
-        easier way of announcing their own pools to the world!
-      </h4>
+        <Button class="bt1" onClick={OpenJoinPage}>Join the List</Button>
+
     </div>
   );
 };
