@@ -4,13 +4,19 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import Home from './Home';
+import StakeList from './StakeList';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+import Home from './Home';
+import { createRoot } from 'react-dom/client';
+import {BrowserRouter as Router} from 'react-router-dom';
+
+const rootElement = document.getElementById('root');
+const root = createRoot(rootElement);
+
 root.render(
-  <React.StrictMode>
-    <Home/>
-  </React.StrictMode>
+  <Router>
+    <Home />
+  </Router>
 );
 
 reportWebVitals();

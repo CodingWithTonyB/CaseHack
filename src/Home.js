@@ -1,14 +1,20 @@
 import * as React from 'react';
-import StakeList from "./StakeList";
+import { Routes, Route, useNavigate, Navigate} from 'react-router-dom';
+import StakeList from './StakeList';
+import Join from './Join';
 
 const Home = () => {
 
-  const OpenJoinPage = () => {
-    alert("(Opens Join.js)");
+  const navigate = useNavigate();
+
+  const navigateToStakeList = () => {
+    //  navigate to /contacts
+    navigate('/StakeList');
   };
 
-  const OpenStakeListPage = () => {
-    alert('(Opens StakeList.js)');
+  const navigateToJoin = () => {
+    // navigate to /
+    navigate('/Join');
   };
 
   return (
@@ -29,10 +35,14 @@ const Home = () => {
         </h4>
         <br></br>
         <br></br>
-        <Button class="bt2" onClick={OpenStakeListPage}>View Stake List</Button>
-      &nbsp;&nbsp;
-        <Button class="bt1" onClick={OpenJoinPage}>Join the List</Button>
+        <Button class="bt2" onClick={navigateToStakeList}>View Stake List</Button>
+        &nbsp;&nbsp;
+        <Button class="bt1" onClick={navigateToJoin}>Join the List</Button>
 
+        <Routes>
+          <Route path="/StakeList" element={<StakeList />} />
+          <Route path="/Join" element={<Join />} />
+        </Routes>
     </div>
   );
 };
