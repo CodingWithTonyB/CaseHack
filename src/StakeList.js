@@ -2,11 +2,28 @@ import logo from './logo.svg';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
+import { supabase } from './supabase.js';
+import {v4 as uid} from 'uuid'
 import React, {useEffect, useState, useRef, useLayoutEffect} from "react";
 
 const tableHeaders = ["Name of Your Pool", "Eth Staked", "Number of Node Operators", "APR%", "Link"];
 const array = [["Test", "Data1", "Data2", "Data3"], ["test3", "test4", "test5", "test6"]]
+const test = ["Test", "Data1", "Data2", "Data3"]
 array.map(e => e.push("Link"));
+const pushToSupaBase = async () => {
+    try{
+    const {data, error} = await supabase
+    .from('posts')
+    .insert({id: uid(), pool_name: test[0],eth_staked: test[1], nodeoperators: test[2], apr: test[3], link: test[4]}, {returning: "minimal"});
+
+    if(error){
+      throw Error("Error Entering the Database" +  error.message);
+    }
+    }
+    catch(error){
+      console.log(error);
+    }
+}
 function StakeList() {
 const [arrowState, setArrowState] = useState("glyphicon glyphicon-triangle-bottom");
 const [data, setData] = useState(array);
@@ -17,6 +34,7 @@ const handleClick = () => {
   else{
     setArrowState("glyphicon glyphicon-triangle-bottom")
   }
+  pushToSupaBase();
 }
   return (
     <div className="App">
