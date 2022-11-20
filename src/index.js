@@ -1,9 +1,6 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min'; 
+import React from 'react'; 
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import StakeList from './StakeList';
 import reportWebVitals from './reportWebVitals';
 
