@@ -23,6 +23,38 @@
   width: 100%;
 }
 
+.allign-left-1 {
+  display: inline-block;
+  width: 220px;
+  text-align: left;
+}
+.allign-left-2 {
+  display: inline-block;
+  width: 220px;
+  text-align: left;
+}
+.allign-left-3 {
+  display: inline-block;
+  width: 220px;
+  text-align: left;
+}
+.allign-left-4 {
+  display: inline-block;
+  width: 220px;
+  text-align: left;
+}
+.allign-left-5 {
+  display: inline-block;
+  width: 220px;
+  text-align: left;
+}
+
+.allign-right {
+  float: left;
+  position: relative;
+  left: 55%;
+} 
+
 .my-text-biggest {
   font-family: Calibri;
   font-size: 60px;

@@ -10,7 +10,7 @@ import './Home.css'
 const tableHeaders = ["Name of the Pool", "ETH Staked", "Number of Node Operators", "APR %", "Link to Website"];
 function StakeList() {
   const [myData, setMyData] = useState([]);
-  const getData = async () => {
+  const loadData = async () => {
     try {
         const {data, error} = await supabase
             .from('posts')
@@ -41,7 +41,12 @@ const sort = (index) => {
     setArrowState("glyphicon glyphicon-triangle-bottom")
   }
 }
-useEffect(() => getData().then(e => setMyData(e.map(Object.values))), []);
+useEffect(() => 
+  {async function fetchData(){
+    let returnData = await loadData();
+    setMyData(returnData.map(Object.values));
+  }
+  fetchData()}, []);
 const makeArrow = (index) => {
     if (index !== 4) {
         return <span id={index} className={arrowState} onClick={() => sort(index)}></span>
@@ -55,11 +60,11 @@ const makeArrow = (index) => {
         <br></br>
       <div class= "text-center">
       <Link to='/'>
-      <button class="btn btn-secondary" type="submit">Home</button>
+        <button class="btn btn-secondary" type="submit">Home</button>
       </Link>
       &nbsp;
       <Link to='/Join'>
-      <button class="btn btn-secondary" type="submit">Join</button>
+        <button class="btn btn-secondary" type="submit">Join</button>
       </Link>
       </div>
         <br></br>

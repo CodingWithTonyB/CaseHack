@@ -4,13 +4,6 @@ import StakeList from './StakeList'
 import Join from './Join'
 
 const Home = () => {
-  const navigateToStakeList = () => {
-
-  };
-
-  const navigateToJoin = () => {
-
-  };
 
   return (
     <div>
@@ -32,11 +25,11 @@ const Home = () => {
         <br></br>
         <br></br>
         <Link to='/StakeList'>
-          <Button class="bt2" onClick={navigateToStakeList}>View Stake List</Button>
+          <Button class="bt2">View Stake List</Button>
         </Link>
         &nbsp;&nbsp;
         <Link to='Join'>
-          <Button class="bt1" onClick={navigateToJoin}>Join the List</Button>
+          <Button class="bt1">Join the List</Button>
         </Link>
     </div>
     </div>
