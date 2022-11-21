@@ -22,16 +22,8 @@ function Join() {
     const [apr, setApr] = React.useState('');
     const [link, setLink] = React.useState('');
 
-
     const handleSubmit = (e) => {
         e.preventDefault();
-        const All = [name, eth, operators, apr, link];
-        console.log(name)
-        console.log(eth)
-        console.log(operators)
-        console.log(apr)
-        console.log(link)
-        console.log(All)
         pushToSupaBase();
         alert('Your request was submitted.');
     }
@@ -63,29 +55,33 @@ function Join() {
             <br></br>
             <br></br>
             <form onSubmit={handleSubmit}>
-                <div>
-                    <label class='padding'>Name of the Pool</label>
-                    <input class='padding'id="name" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+                <div class="row d-flex justify-content-center position-absolute">
+                    <div class="col-lg-2 col-md-2">
+                        <label class='padding'>Name of the Pool</label>
+                        <input class='padding-bottom'id="name" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
 
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <label class='padding'>ETH Staked</label>
+                        <input class='padding'id="eth" type="text" value={eth} onChange={(e) => setEth(e.target.value)}/>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-md-offset-1">
+                        <label class='padding' >Number of Node Operators</label>
+                        <input class='padding'id="operators" type="text" value={operators} onChange={(e) => setOperators(e.target.value)}/>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <label class='padding' >APR %</label>
+                        <input class='padding'id="apr" type="text" value={apr} onChange={(e) => setApr(e.target.value)}/>
+                    </div>
+                    <div class="col-lg-2 col-md-2">
+                        <label class='padding' >Link to Website</label>
+                        <input class='padding'id="link" type="text" value={link} onChange={(e) => setLink(e.target.value)}/>
+                    </div>
+                    <br></br>
+                    <Link to='/StakeList'>
+                        <button class="btn btn-secondary" type="submit">Submit</button>
+                    </Link>
                 </div>
-                <div>
-                    <label class='padding'>ETH Staked</label>
-                    <input class='padding'id="eth" type="text" value={eth} onChange={(e) => setEth(e.target.value)}/>
-                </div>
-                <div>
-                    <label class='padding' >Number of Node Operators</label>
-                    <input class='padding'id="operators" type="text" value={operators} onChange={(e) => setOperators(e.target.value)}/>
-                </div>
-                <div>
-                    <label class='padding' >APR %</label>
-                    <input class='padding'id="apr" type="text" value={apr} onChange={(e) => setApr(e.target.value)}/>
-                </div>
-                <div>
-                    <label class='padding' >Link to Website</label>
-                    <input class='padding'id="link" type="text" value={link} onChange={(e) => setLink(e.target.value)}/>
-                </div>
-                <br></br>
-                    <button class="btn btn-secondary" type="submit">Submit</button>
             </form>
         </div>
 
