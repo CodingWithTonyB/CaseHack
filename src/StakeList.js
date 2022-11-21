@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
-import React, {useEffect, useState, useRef, useLayoutEffect} from "react";
+import React, { useState} from "react";
 import {supabase} from "./supabase";
 
 const tableHeaders = ["Name of the Pool", "ETH Staked", "Number of Node Operators", "APR %", "Link to Website"];
@@ -84,6 +84,7 @@ for (let x in param){
 
         </thead>
         <tbody>
+          {console.log(data)}
           {data.map(e => (<tr>{e.map((e, index) => index === 0 ? (<td scope="row"><b>{e}</b></td>): 
           (index === 4? 
           (<td scope="row"><a href={e}>{e}</a></td>)
