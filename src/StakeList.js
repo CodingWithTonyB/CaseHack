@@ -5,11 +5,9 @@ import {supabase} from "./supabase";
 import { Link } from "react-router-dom";
 import './Home.css'
 
-const tableHeaders = ["Name of the Pool", "ETH Staked", "Number of Node Operators", "APR %", "Link to Website"];
- // const array = [["Rocket Pool", "307,040", "1,739", "4.64", "https://rocketpool.net/#header"],
+// const array = [["Rocket Pool", "307,040", "1,739", "4.64", "https://rocketpool.net/#header"],
  //     ["StakeWise", "67,488.70", "2,099", "5.28", "https://app.stakewise.io/"]]
-
-
+const tableHeaders = ["Name of the Pool", "ETH Staked", "Number of Node Operators", "APR %", "Link to Website"];
 function StakeList() {
   const [myData, setMyData] = useState([]);
   const getData = async () => {
