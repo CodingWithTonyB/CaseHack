@@ -22,8 +22,16 @@ function Join() {
     const [apr, setApr] = React.useState('');
     const [link, setLink] = React.useState('');
 
+
     const handleSubmit = (e) => {
         e.preventDefault();
+        const All = [name, eth, operators, apr, link];
+        console.log(name)
+        console.log(eth)
+        console.log(operators)
+        console.log(apr)
+        console.log(link)
+        console.log(All)
         pushToSupaBase();
         alert('Your request was submitted.');
     }
@@ -77,9 +85,7 @@ function Join() {
                     <input class='padding'id="link" type="text" value={link} onChange={(e) => setLink(e.target.value)}/>
                 </div>
                 <br></br>
-                <Link to='/StakeList'>
                     <button class="btn btn-secondary" type="submit">Submit</button>
-                </Link>
             </form>
         </div>
 
