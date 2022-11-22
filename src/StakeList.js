@@ -60,11 +60,11 @@ const makeArrow = (index) => {
         <br></br>
       <div class= "text-center">
       <Link to='/'>
-        <button class="btn btn-secondary" type="submit">Home</button>
+        <button class="btn btn-light" type="submit">Home</button>
       </Link>
       &nbsp;
       <Link to='/Join'>
-        <button class="btn btn-secondary" type="submit">Join</button>
+        <button class="btn btn-light" type="submit">Join</button>
       </Link>
       </div>
         <br></br>
