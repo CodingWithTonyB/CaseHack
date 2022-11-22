@@ -38,7 +38,7 @@ const Home = () => {
 
 const Button = ({ onClick, children }) => {
   return (
-    <button type="button" class="btn btn-secondary" onClick={onClick}>
+    <button type="button" class="btn btn-light" onClick={onClick}>
       {children}
     </button>
   );

@@ -3,6 +3,10 @@
   text-align: center;
 }
 
+.join-size-barrier {
+  
+}
+
 .custom-button {
   position: absolute;
   top: 20px;
@@ -24,36 +28,25 @@
 }
 
 .allign-left-1 {
-  display: inline-block;
-  width: 220px;
-  text-align: left;
+  text-align: center;
 }
 .allign-left-2 {
-  display: inline-block;
-  width: 220px;
-  text-align: left;
+  text-align: center;
 }
 .allign-left-3 {
-  display: inline-block;
-  width: 220px;
-  text-align: left;
+  text-align: center;
 }
 .allign-left-4 {
-  display: inline-block;
-  width: 220px;
-  text-align: left;
+  text-align: center;
 }
 .allign-left-5 {
-  display: inline-block;
-  width: 220px;
-  text-align: left;
+  text-align: center;
 }
 
 .allign-right {
-  float: left;
-  position: relative;
-  left: 55%;
-} 
+  text-align: center;
+  align: center;
+}  
 
 .my-text-biggest {
   font-family: Calibri;

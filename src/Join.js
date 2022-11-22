@@ -58,24 +58,39 @@ function Join() {
                 <div class="row d-flex justify-content-center position-absolute">
                     <div class="col-lg-2 col-md-2">
                         <label class='allign-left-1'>Name of the Pool:</label>
+                        <br></br>
                         <input id="name" type="text" value={name} onChange={(e) => setName(e.target.value)}/>
+                        <br></br>
+                        <br></br>
 
                     </div>
                     <div class="col-lg-2 col-md-2">
                         <label class='allign-left-2'>ETH Staked:</label>
+                        <br></br>
                         <input id="eth" type="text" value={eth} onChange={(e) => setEth(e.target.value)}/>
+                        <br></br>
+                        <br></br>
                     </div>
                     <div class="col-lg-2 col-md-2 col-md-offset-1">
                         <label class='allign-left-3' >Number of Node Operators:</label>
+                        <br></br>
                         <input id="operators" type="text" value={operators} onChange={(e) => setOperators(e.target.value)}/>
+                        <br></br>
+                        <br></br>
                     </div>
                     <div class="col-lg-2 col-md-2">
                         <label class='allign-left-4' >APR %:</label>
+                        <br></br>
                         <input id="apr" type="text" value={apr} onChange={(e) => setApr(e.target.value)}/>
+                        <br></br>
+                        <br></br>
                     </div>
                     <div class="col-lg-2 col-md-2">
                         <label class='allign-left-5' >Link to Website:</label>
+                        <br></br>
                         <input id="link" type="text" value={link} onChange={(e) => setLink(e.target.value)}/>
+                        <br></br>
+                        <br></br>
                     </div>
                     <br></br>
                     <br></br>
